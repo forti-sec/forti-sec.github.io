@@ -1,11 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
+  font-family: Arial, sans-serif;
   background: #0d1117;
   color: #e6edf3;
   line-height: 1.6;
@@ -13,10 +10,7 @@ body {
 
 header {
   background: #161b22;
-  padding: 15px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 15px 30px;
 }
 
 .logo {
@@ -24,25 +18,30 @@ header {
   color: #58a6ff;
 }
 
-.logo span {
-  color: #f78166;
+.logo span { color: #f7768e; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+}
+
+.nav-links li {
+  margin-left: 20px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #e6edf3;
-  font-weight: 500;
+  color: #c9d1d9;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links .active {
+.nav-links a:hover, .active {
   color: #58a6ff;
 }
 
@@ -52,61 +51,54 @@ header {
 }
 
 .hero h2 {
-  font-size: 40px;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.hero span {
-  color: #58a6ff;
-}
+.highlight { color: #58a6ff; }
 
 .btn {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 12px 25px;
   background: #58a6ff;
-  color: #fff;
+  color: #0d1117;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: #1f6feb;
+  background: #f7768e;
+  color: white;
 }
 
-.projects {
-  padding: 50px;
+.about, .projects {
+  padding: 50px 20px;
   text-align: center;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.project-list {
+  display: flex;
+  justify-content: center;
   gap: 20px;
-  margin-top: 20px;
 }
 
-.card {
+.project-card {
   background: #161b22;
   padding: 20px;
   border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.about {
-  padding: 50px;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
+.project-card:hover {
+  transform: scale(1.05);
 }
 
 footer {
   text-align: center;
   padding: 20px;
+  margin-top: 40px;
   background: #161b22;
-  margin-top: 50px;
 }
